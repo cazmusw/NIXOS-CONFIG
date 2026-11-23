@@ -83,11 +83,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1795448815,
-        "narHash": "sha256-uQQqdQfPaO5xPVlA/JXB6CgaCYqjv+FqkFb1Eu09ok8=",
+        "lastModified": 1795449050,
+        "narHash": "sha256-HZJlJkIPL22YxMphUCLzadvtSEF1cM5V040bYRS+6ik=",
         "owner": "cazmusw",
         "repo": "VibeShell",
-        "rev": "330d9d43d53d9580c84b1c661918fedd71bfecef",
+        "rev": "d5450a028ab236659abeb084f558d8a9d7f5e5a2",
         "type": "github"
       },
       "original": {
