@@ -44,5 +44,6 @@
   corefonts = { source = "stable"; };
   steam = { source = "stable"; };
   chatgpt = { source = "unstable"; };
+  xpipe = { source = "unstable"; };
   labwc = { source = "unstable"; };
 }

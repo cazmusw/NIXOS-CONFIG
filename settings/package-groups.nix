@@ -5,6 +5,7 @@
   desktop = [ "alacritty" "fuzzel" "mako" "swaylock" "swayidle" "swaybg"
     "xwayland" "wl-clipboard" "brightnessctl" "pavucontrol" "libnotify" "xdg-utils" ];
   internet = [ "firefox" "ayugram-desktop" "discord" ];
+  remote = [ "xpipe" ];
   development = [ "vscode" ];
   games = [ "prismlauncher" ];
   graphics = [ "grim" "flameshot" ];
