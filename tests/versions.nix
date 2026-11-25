@@ -33,6 +33,7 @@ let
     }) {} stable;
     in selected.labwc.version == "test-custom-version";
     labwcVersion = flake.nixosConfigurations.nixos.pkgs.labwc.version == base.labwc.version;
+    xpipeVersion = flake.nixosConfigurations.nixos.pkgs.xpipe.version == base.packages.xpipe.expectedVersion;
     groupCoverage = let groups = import ../settings/package-groups.nix;
       in builtins.all (name: builtins.hasAttr name base.packages) (builtins.concatLists (builtins.attrValues groups));
   };

@@ -22,6 +22,7 @@ let
     in if expected != null && (package.version or null) != expected
        then throw "Version mismatch for ${name}: expected ${expected}, got ${package.version or "unknown"}"
        else package;
+  xpipe = versions.packages.xpipe or {};
   selected =
   (builtins.mapAttrs resolve versions.packages) // lib.optionalAttrs (versions.labwc.version != null) {
     labwc = (resolve "labwc" versions.packages.labwc).overrideAttrs (_: {
@@ -31,6 +32,17 @@ let
         repo = "labwc";
         tag = versions.labwc.version;
         inherit (versions.labwc) hash;
+      };
+    });
+  } // lib.optionalAttrs (xpipe ? archiveHash) {
+    xpipe = (resolve "xpipe" xpipe).overrideAttrs (old: {
+      version = xpipe.expectedVersion;
+      src = sources.nixpkgs-unstable.fetchzip {
+        url = "https://github.com/xpipe-io/xpipe/releases/download/${xpipe.expectedVersion}/xpipe-portable-linux-x86_64.tar.gz";
+        hash = xpipe.archiveHash;
+      };
+      meta = old.meta // {
+        changelog = "https://github.com/xpipe-io/xpipe/releases/tag/${xpipe.expectedVersion}";
       };
     });
   };

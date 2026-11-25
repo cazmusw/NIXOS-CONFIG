@@ -44,6 +44,11 @@
   corefonts = { source = "stable"; };
   steam = { source = "stable"; };
   chatgpt = { source = "unstable"; };
-  xpipe = { source = "unstable"; };
+  # Transitional release for migrating vaults to XPipe 24.
+  xpipe = {
+    source = "unstable";
+    expectedVersion = "23.99.2";
+    archiveHash = "sha256-QDbkQtcL8rdfKzgG91t32sBK+4TJX4PdIvwtxwtu0cs=";
+  };
   labwc = { source = "unstable"; };
 }
