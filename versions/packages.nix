@@ -45,8 +45,9 @@
   steam = { source = "stable"; };
   chatgpt = { source = "unstable"; };
   # Transitional release for migrating vaults to XPipe 24.
+  # XPipe passes its library path to local editors. Keep it on the host ABI.
   xpipe = {
-    source = "unstable";
+    source = "stable";
     expectedVersion = "23.99.2";
     archiveHash = "sha256-QDbkQtcL8rdfKzgG91t32sBK+4TJX4PdIvwtxwtu0cs=";
   };

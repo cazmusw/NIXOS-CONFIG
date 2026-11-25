@@ -37,7 +37,7 @@ let
   } // lib.optionalAttrs (xpipe ? archiveHash) {
     xpipe = (resolve "xpipe" xpipe).overrideAttrs (old: {
       version = xpipe.expectedVersion;
-      src = sources.nixpkgs-unstable.fetchzip {
+      src = prev.fetchzip {
         url = "https://github.com/xpipe-io/xpipe/releases/download/${xpipe.expectedVersion}/xpipe-portable-linux-x86_64.tar.gz";
         hash = xpipe.archiveHash;
       };
