@@ -9,7 +9,7 @@
     <default />
     <keybind key="Print"><action name="Execute" command="flameshot gui" /></keybind>
     <keybind key="W-t"><action name="Execute" command="alacritty" /></keybind>
-    <keybind key="W-d"><action name="Execute" command="fuzzel" /></keybind>
+    <keybind key="W-d"><action name="Execute" command="shellctl launcher" /></keybind>
     <keybind key="W-q"><action name="Close" /></keybind>
     <keybind key="W-h"><action name="Iconify" /></keybind>
     <keybind key="W-m"><action name="ToggleMaximize" /></keybind>

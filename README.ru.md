@@ -99,6 +99,10 @@ URL AppImage строится автоматически. После обнов�
 Журналы можно посмотреть командой
 `journalctl --user -u mosaic-services -u mosaic-shell -b`.
 
+Super+D открывает центр приложений VibeShell. Если есть собственный
+`~/.config/labwc/rc.xml`, укажи для привязки `W-d` команду
+`shellctl launcher` и выполни `labwc --reconfigure`.
+
 Папки открываются в Mosaic Files. Если в пользовательском
 `mimeapps.list` папки были назначены Thunar, служба меняет эту запись
 через GIO. В проводнике файлы открываются приложениями для своих MIME-типов.

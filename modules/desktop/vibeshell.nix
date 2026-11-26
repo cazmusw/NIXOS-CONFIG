@@ -44,6 +44,8 @@ in
 
   systemd.user.services.mosaic-shell = sessionService // {
     description = "Mosaic Shell panel and Dock";
+    # GIO resolves desktop entries' Exec and TryExec against the UWSM session PATH.
+    enableDefaultPath = false;
     wants = [ "mosaic-services.service" ];
     after = sessionService.after ++ [ "mosaic-services.service" ];
     serviceConfig = {
