@@ -51,6 +51,8 @@ in
     serviceConfig = {
       ExecStartPre = "-${migrateFileManager}";
       ExecStart = "${vibeshell}/bin/mosaic-shell";
+      # Applications launched through GIO can share this cgroup.
+      OOMPolicy = "continue";
       Restart = "on-failure";
       RestartSec = 1;
     };
